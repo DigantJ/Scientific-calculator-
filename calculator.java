@@ -57,7 +57,6 @@ class Calculator {
         return p;
     }
 
-    //operator checking
     private boolean isoperator(String x)
     {
         if(x.equals("+") || x.equals("-") || x.equals("x") || x.equals("/") || x.equals("sqrt") || x.equals("^") || x.equals("!") || x.equals("sin") || x.equals("cos") || x.equals("tan") || x.equals("ln") || x.equals("log"))
@@ -108,7 +107,6 @@ class Calculator {
         return p;
     }
 
-    //factorial method
     private double factorial(double y) {
         double fact=1;
         if(y==0 || y==1) {
@@ -121,7 +119,6 @@ class Calculator {
         return fact;
     }
 
-    //for actual calculation with binary operators
     private double calculate(double x,double y,String c)
     {
         double res=0;
@@ -148,7 +145,6 @@ class Calculator {
         return res;
     }
 
-    //calculation with unary operators
     private double calculate(double y,String c) {
         double res=0;
         switch(c) {
@@ -217,7 +213,6 @@ class Calculator {
         return res;  //final result
     }
 
-    //actual combined method for calculation
     private void calculateMain() {
         String tokens[]=expression.split(",");
         for(int i=0; i<tokens.length; i++) {
@@ -232,7 +227,6 @@ class Calculator {
     }
 
 
-    //design of the frame with their action listner
     private void initialize() {
         frmCalculator = new JFrame();
         frmCalculator.setResizable(false);
@@ -317,7 +311,6 @@ class Calculator {
         butttonPanel.add(button2);
 
 
-        //button for constant pi
         JButton button3 = new JButton("<html><body><span>π</span></body></html>");
         button3.setFont(new Font("Calibri Light", Font.PLAIN, 17));
         button3.addActionListener(new ActionListener() {
